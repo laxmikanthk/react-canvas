@@ -3,7 +3,7 @@ import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
+//import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import TextField from "@material-ui/core/TextField";
 
@@ -33,8 +33,13 @@ class CanvasComponent extends React.Component {
             const x = e.clientX - rect.left
             const y = e.clientY - rect.top
             console.log("x: " + x + " y: " + y)
+            // this.setState({
+            //     dialogOpen: true
+            // });
         })
     }
+
+    
     
     handleOpenDialog = () => {
         this.setState({
@@ -73,13 +78,13 @@ class CanvasComponent extends React.Component {
                     <Button onClick={this.handleClose} color="primary">
                     Close
                     </Button>
-                    <Button
+                    {/* <Button
                     onClick={() => this.handleTag(item.id)}
                     color="primary"
                     autoFocus
                     >
                     Tag
-                    </Button>
+                    </Button> */}
                 </DialogActions>
             </Dialog>
         </div>
